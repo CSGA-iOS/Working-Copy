@@ -21,3 +21,7 @@ if (url.indexOf(path1) != -1) {
  }
 
 $done({body});
+
+/*
+http-response ^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ requires-body=1,max-size=0,script-path=http://blackyukios.cf/scripts/vsco.js, script-update-interval=0
+*/
