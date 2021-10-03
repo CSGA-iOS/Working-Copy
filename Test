@@ -18,11 +18,12 @@ test-timeout = 3
 [Proxy]
 
 [Proxy Group]
-Advertising = select,🎯𝐃𝐢𝐫𝐞𝐜𝐭,⛔️𝐑𝐞𝐣𝐞𝐜𝐭,img-url = https://raw.githubusercontent.com/BlackYukiOS/Plugin/main/icons/advertising.png
-OTA Apple = select,🎯𝐃𝐢𝐫𝐞𝐜𝐭,⛔️𝐑𝐞𝐣𝐞𝐜𝐭,img-url = https://raw.githubusercontent.com/BlackYukiOS/Plugin/main/icons/apple.png
 ViP Server = select,Active,img-url = https://raw.githubusercontent.com/BlackYukiOS/Plugin/main/icons/vip-card.png
-⛔️𝐑𝐞𝐣𝐞𝐜𝐭 = select,REJECT,img-url = https://raw.githubusercontent.com/BlackYukiOS/Plugin/main/icons/say-no.png
-🎯𝐃𝐢𝐫𝐞𝐜𝐭 = select,DIRECT,img-url = https://raw.githubusercontent.com/BlackYukiOS/Plugin/main/icons/ok.png
+Advertising = select,✅ON,⛔️OFF,img-url = https://raw.githubusercontent.com/BlackYukiOS/Plugin/main/icons/advertising.png
+Facebook ADS = select,✅ON,⛔️OFF,img-url = https://raw.githubusercontent.com/BlackYukiOS/Plugin/main/icons/facebook.png
+OTA Apple = select,✅ON,⛔️OFF,img-url = https://raw.githubusercontent.com/BlackYukiOS/Plugin/main/icons/apple.png
+⛔️OFF = select,DIRECT,img-url = https://raw.githubusercontent.com/BlackYukiOS/Plugin/main/icons/switch-off.png
+✅ON = select,REJECT,img-url = https://raw.githubusercontent.com/BlackYukiOS/Plugin/main/icons/switch-on.png
 [Rule]
 #Type:DOMAIN-SUFFIX,DOMAIN,DOMAIN-KEYWORD,USER-AGENT,URL-REGEX,IP-CIDR
 #Strategy:DIRECT,PROXY,REJECT
@@ -34,6 +35,9 @@ GEOIP,vn,DIRECT
 FINAL,DIRECT
 
 [Remote Rule]
+https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/hostsVN-surge-rule.conf, policy=Advertising, tag=Advertising, enabled=true
+https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/hostsVN-surge-OTA.conf, policy=OTA Apple, tag=Apple OTA, enabled=true
+https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/hostsVN-surge-FB.conf, policy=Facebook ADS, tag=Facebook, enabled=true
 
 
 [Remote Proxy]
@@ -47,26 +51,17 @@ enable = true
 
 
 [Remote Rewrite]
-https://raw.githubusercontent.com/BlackYukiOS/Plugin/main/Advertising-All.conf, tag=🚫Advertising-All, enabled=true
 [Script]
-http-response ^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/ script-path=vsco.js, requires-body=true, binary-body-mode=true, timeout=10, tag=vsco
-http-response ^https:\/\/lite\.pearhot\.com\/(api\/account\/CheckVip|api\/movie\/WatchFgMovie|api\/account\/IsVip|api\/account\/suport|api\/movie\/WatchMovieNew|api\/account/\IndexDetail) script-path=lg.js, requires-body=true, binary-body-mode=true, timeout=10, tag=pearl
-http-response ^https:\/\/api\.simeji\.me\/simeji-skins\/ios\/newHomePage* script-path=simeji2.js, requires-body=true, binary-body-mode=true, timeout=10, tag=simeji2
-http-response ^https:\/\/api\.termius\.com\/api\/v3\/bulk\/account script-path=termin.js, requires-body=true, timeout=10, tag=ter
-http-response ^https:/\/api\.simeji\.me\/passport\/sectbind script-path=simeji.js, requires-body=true, timeout=10, tag=semeji
-http-response ^https:\/\/skyapi\.live\.net\/API\/2\/GetStorageInfo* script-path=micro.js, requires-body=true, timeout=10, tag=mic
-http-response ^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile\/nul\/(v2|v1) script-path=express.js, requires-body=true, timeout=10, tag=expre
-http-response ^https:\/\/cc-api-storage\.adobe\.io\/profile\/quota script-path=storagexpr.js, requires-body=true, timeout=10, tag=store
-http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=Restore.js, requires-body=true, timeout=10, tag=Restore.js
+http-response ^https:\/\/api\.simeji\.me\/passport\/sectbind script-path=simeji.js, requires-body=true, timeout=10, tag=simeji
+http-response ^https:\/\/app\.fing\.com\/purchase\/verify script-path=pearl.js, requires-body=true, binary-body-mode=true, timeout=10, tag=pearl
+http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=Restore.js, requires-body=true, timeout=10, enabled=false, tag=Restore.js
 http-response ^https:\/\/api\.flixel\.com\/api\/(users\/1647013|verify_credentials) script-path=cine.js, requires-body=true, timeout=10, tag=cine
 [Remote Script]
 [Plugin]
-http://www.blackyukios.tk/Pearlxx.plugin, policy=ViP Server, tag=🔞Pearlxx, enabled=true
-http://www.blackyukios.cf/app-premium.plugin, policy=ViP Server, tag=🇻🇳Black YukiOS, enabled=true
-https://raw.githubusercontent.com/BlackYukiOS/Plugin/main/Advertising-All.plugin, policy=Advertising, tag=🚫Advertising-All, enabled=true
-https://raw.githubusercontent.com/BlackYukiOS/Plugin/main/Other/OTA.plugin, policy=OTA Apple, tag=🔰OTA Block, enabled=true
+http://www.blackyukios.tk/Pearlxx/10sadasa21, policy=ViP Server, tag=🔞Pearlxx, enabled=true
+http://www.blackyukios.tk/premium/10dsafsaf21, policy=ViP Server, tag=🇻🇳Black YukiOS, enabled=true
 [Mitm]
 ca-p12 = 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
 ca-passphrase = 1475K437
-hostname = lite.pearhot.com,api.termius.com,api.simeji.me,skyapi.live.net,lcs-mobile-cops.adobe.io,cc-api-storage.adobe.io,api.flixel.com,api.revenuecat.com,buy.itunes.apple.com,ipa.plist, raw.githubusercontent.com, gist.githubusercontent.com, *.googlevideo.com
+hostname = m.pearkin.com,api.simeji.me,api.revenuecat.com,buy.itunes.apple.com,ipa.plist, *.googlevideo.com
 skip-server-cert-verify = false
