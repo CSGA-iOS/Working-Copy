@@ -1,0 +1,131 @@
+var obj = JSON.parse($response.body);
+var bundle_id = obj.receipt["bundle_id"];
+
+if (bundle_id == "com.darinsoft.vimo") {
+obj.receipt["in_app"] = [{
+      "quantity": "1",
+      "product_id": "com.vimosoft.premium.annually.subscription",
+      "transaction_id": "590000797494102",
+      "original_transaction_id": "590000797494102",
+      "purchase_date": "2021-09-28 01:06:39 Etc/GMT",
+      "purchase_date_ms": "1632791199000",
+      "purchase_date_pst": "2021-09-27 18:06:39 America/Los_Angeles",
+      "original_purchase_date": "2021-09-28 01:06:42 Etc/GMT",
+      "original_purchase_date_ms": "1632791202000",
+      "original_purchase_date_pst": "2021-09-27 18:06:42 America/Los_Angeles",
+      "expires_date": "2999-10-28 01:06:39 Etc/GMT",
+      "expires_date_ms": "4717011999000",
+      "expires_date_pst": "2999-10-27 18:06:39 America/Los_Angeles",
+      "web_order_line_item_id": "590000331609415",
+      "is_trial_period": "false",
+      "is_in_intro_offer_period": "false",
+      "in_app_ownership_type": "PURCHASED"
+    }];
+obj["latest_receipt_info"] = [{
+    "quantity": "1",
+    "product_id": "com.vimosoft.premium.annually.subscription",
+    "transaction_id": "590000797494102",
+    "original_transaction_id": "590000797494102",
+    "purchase_date": "2021-09-28 01:06:39 Etc/GMT",
+    "purchase_date_ms": "1632791199000",
+    "purchase_date_pst": "2021-09-27 18:06:39 America/Los_Angeles",
+    "original_purchase_date": "2021-09-28 01:06:42 Etc/GMT",
+    "original_purchase_date_ms": "1632791202000",
+    "original_purchase_date_pst": "2021-09-27 18:06:42 America/Los_Angeles",
+    "expires_date": "2999-10-28 01:06:39 Etc/GMT",
+    "expires_date_ms": "4717011999000",
+    "expires_date_pst": "2999-10-27 18:06:39 America/Los_Angeles",
+    "web_order_line_item_id": "590000331609415",
+    "is_trial_period": "false",
+    "is_in_intro_offer_period": "false",
+    "in_app_ownership_type": "PURCHASED",
+    "subscription_group_identifier": "20522137"
+  }];
+}
+
+else { if (bundle_id == "com.iosstarnest.jlpt"){
+obj.receipt["in_app"] = [{
+      "quantity": "1",
+      "product_id": "starnest.lifetime",
+      "transaction_id": "590000749914987",
+      "original_transaction_id": "590000749914987",
+      "purchase_date": "2021-07-13 16:17:08 Etc/GMT",
+      "purchase_date_ms": "1626193028000",
+      "purchase_date_pst": "2021-07-13 09:17:08 America/Los_Angeles",
+      "original_purchase_date": "2021-07-13 16:17:11 Etc/GMT",
+      "original_purchase_date_ms": "1626193031000",
+      "original_purchase_date_pst": "2021-07-13 09:17:11 America/Los_Angeles",
+      "expires_date": "2099-10-19 05:14:18 Etc/GMT",
+      "expires_date_ms": "4096019658000",
+      "expires_date_pst": "2099-10-18 22:14:18 America/Los_Angeles",
+      "web_order_line_item_id": "590000307005015",
+      "is_trial_period": "false",
+      "is_in_intro_offer_period": "false",
+      "in_app_ownership_type": "PURCHASED"
+    }];
+obj["latest_receipt_info"] = [{
+    "quantity": "1",
+    "product_id": "starnest.lifetime",
+    "transaction_id": "590000749914987",
+    "original_transaction_id": "590000749914987",
+    "purchase_date": "2021-07-13 16:17:08 Etc/GMT",
+    "purchase_date_ms": "1626193028000",
+    "purchase_date_pst": "2021-07-13 09:17:08 America/Los_Angeles",
+    "original_purchase_date": "2021-07-13 16:17:11 Etc/GMT",
+    "original_purchase_date_ms": "1626193031000",
+    "original_purchase_date_pst": "2021-07-13 09:17:11 America/Los_Angeles",
+    "expires_date": "2099-10-19 05:14:18 Etc/GMT",
+    "expires_date_ms": "4096019658000",
+    "expires_date_pst": "2099-10-18 22:14:18 America/Los_Angeles",
+    "web_order_line_item_id": "590000307005015",
+    "is_trial_period": "false",
+    "is_in_intro_offer_period": "false",
+    "in_app_ownership_type": "PURCHASED",
+    "subscription_group_identifier": "20722367"
+  }];
+}
+
+   else { obj.receipt["in_app"] = [{
+      "quantity": "1",
+      "product_id": "com.camerasideas.InstaShot.InShotPro_yearly",
+      "transaction_id": "590000797494102",
+      "original_transaction_id": "590000797494102",
+      "purchase_date": "2021-09-28 01:06:39 Etc/GMT",
+      "purchase_date_ms": "1632791199000",
+      "purchase_date_pst": "2021-09-27 18:06:39 America/Los_Angeles",
+      "original_purchase_date": "2021-09-28 01:06:42 Etc/GMT",
+      "original_purchase_date_ms": "1632791202000",
+      "original_purchase_date_pst": "2021-09-27 18:06:42 America/Los_Angeles",
+      "expires_date": "2999-10-28 01:06:39 Etc/GMT",
+      "expires_date_ms": "4717011999000",
+      "expires_date_pst": "2999-10-27 18:06:39 America/Los_Angeles",
+      "web_order_line_item_id": "590000331609415",
+      "is_trial_period": "false",
+      "is_in_intro_offer_period": "false",
+      "in_app_ownership_type": "PURCHASED"
+    }];
+obj["latest_receipt_info"] = [{
+    "quantity": "1",
+    "product_id": "com.camerasideas.InstaShot.InShotPro_yearly",
+    "transaction_id": "590000797494102",
+    "original_transaction_id": "590000797494102",
+    "purchase_date": "2021-09-28 01:06:39 Etc/GMT",
+    "purchase_date_ms": "1632791199000",
+    "purchase_date_pst": "2021-09-27 18:06:39 America/Los_Angeles",
+    "original_purchase_date": "2021-09-28 01:06:42 Etc/GMT",
+    "original_purchase_date_ms": "1632791202000",
+    "original_purchase_date_pst": "2021-09-27 18:06:42 America/Los_Angeles",
+    "expires_date": "2999-10-28 01:06:39 Etc/GMT",
+    "expires_date_ms": "4717011999000",
+    "expires_date_pst": "2999-10-27 18:06:39 America/Los_Angeles",
+    "web_order_line_item_id": "590000331609415",
+    "is_trial_period": "false",
+    "is_in_intro_offer_period": "false",
+    "in_app_ownership_type": "PURCHASED",
+    "subscription_group_identifier": "20522137"
+  }];
+}
+}
+
+
+$done({body: JSON.stringify(obj)});
