@@ -1,0 +1,28 @@
+{
+  "items": [{
+    "txn_ref": "3514422995",
+    "duration": 1,
+    "duration_type": "months",
+    "name": "VIP",
+    "package_value": 69000,
+    "payment_method": "IAP",
+    "service_name": "Apple",
+    "expiry_date": "2021-11-15 10:31:53.000000",
+    "status": "Success",
+    "amount": 9000,
+    "promotion": 0,
+    "created_date": "2021-10-15 09:31:38.000000",
+    "percent_discount": "0%",
+    "price": 69000,
+    "old_price": 69000,
+    "recurring": 1,
+    "display_duration": "1 tháng"
+  }],
+  "metadata": {
+    "page": 0,
+    "limit": 30,
+    "total": 1
+  }
+}
+
+https://api.vieon.vn/backend/billing/transaction?platform=ios&ui=012021
