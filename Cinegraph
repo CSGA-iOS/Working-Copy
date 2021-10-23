@@ -1,0 +1,30 @@
+var obj = JSON.parse($response.body);
+
+obj["subscription"] = {
+    "includes_hosting": false,
+    "merchant": "apple",
+    "keys2": ["apps", "last_verified_date", "merchant", "plan"],
+    "display_name": "Cinemagraph Pro for iOS",
+    "auto_renew": true,
+    "embed_count": 0,
+    "merchant_billing_url": "https://apps.apple.com/account/billing",
+    "apps": "com.flixel.cinemagraphpro",
+    "signature2": "GgNcPxcrfHkMjfC7zT/XXayyULGHV3QtuHn55qlvmD8WX2Ig0oWHGmIiB+tQiBEi2gPKcmZOx2gi6P7IX2mEfbd3jHdBjlmQzXKnc+uCouQDFiPOZCk1nvQy8U3v/SFiPiyWTBsdAS8yrmyI+0m0iR57ALPiKAeeFx0ihTdCgCA=",
+    "embed_count_limit": null,
+    "storage_limit": 107374182400,
+    "expiry_date": "2999-10-22T00:26:16Z",
+    "usage_reset_date": null,
+    "plan": "bl-ios",
+    "plan_exceeded": false,
+    "merchant_manage_url": "https://apps.apple.com/account/subscriptions",
+    "last_verified_date": "2021-10-15T00:26:29Z",
+    "past_due": false,
+    "storage_usage": 0,
+    "churned": false
+  };
+
+$done({body: JSON.stringify(obj)});
+
+/*
+^https:\/\/api\.flixel\.com\/api\/(users\/[0-9]{7}$|verify_credentials)
+*/
