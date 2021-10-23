@@ -1,0 +1,19 @@
+var obj = JSON.parse($response.body);
+
+obj["data"] = {
+    "rwExpire": "2999-08-14T04:03:53.161Z",
+    "rwFirstPurchase": "2020-07-31T04:03:53.161Z",
+    "rwLastPurchase": "2020-07-31T04:03:53.161Z",
+    "rwMarket": "Other",
+    "rwProduct": "finsify_sub_day_14_gift",
+    "rwLimit": 10,
+    "acceptSync": true,
+    "createdDate": "2020-07-26T03:44:35.544Z",
+    "purchased": true
+  };
+
+$done({body: JSON.stringify(obj)});
+
+/*
+^https:\/\/revoapi\.moneylover\.me\/api\/status
+*/
