@@ -1,0 +1,41 @@
+/*
+https://music.amazon.com/FE/api/stratus/isAccountValid
+music.amazon.com
+*/
+
+{
+  "accountValid": true,
+  "customerAccount": {
+    "accountInfo": {
+      "accountStatus": "ACTIVE",
+      "creationDate": 1.531011231441E9,
+      "customerId": "A13PUN9DE6HFWI",
+      "endpointDomain": "www.amazon.co.jp",
+      "marketplaceId": "A1VC38T7YXB528",
+      "musicTerritory": "JP"
+    },
+    "accountVerified": {
+      "verified": true,
+      "verifiedDate": 1.632274653525E9
+    },
+    "customerBenefits": {
+      "NIGHTWING": "true",
+      "HAWKFIRE_PLAYBACK_ACCESS": "true",
+      "PRIME_MUSIC_BROWSE": "true",
+      "MAX_TRACK_COUNT": "250",
+      "HAWKFIRE_KATANA_ACCESS": "true",
+      "PRIME_MUSIC_CONTENT_ACCESS": "true",
+      "IMPORT_ELIGIBILITY_TIER": "FREE",
+      "HAWKFIRE_BROWSE_AND_ADD": "true"
+    },
+    "termsOfUse": [{
+      "__type": "com.amazon.cirrus.shared.model#TermsOfUseAccepted",
+      "acceptedDate": 1.632274689236E9,
+      "marketplaceId": "A1VC38T7YXB528",
+      "type": "MP3",
+      "version": "2.0.0"
+    }]
+  },
+  "globalBenefits": {},
+  "shouldInvokeWebview": false
+}
