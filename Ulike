@@ -1,0 +1,28 @@
+var obj = JSON.parse($response.body);
+
+obj = {
+  "ret": "0",
+  "errmsg": "success",
+  "systime": "1634794081604",
+  "response": "{\"flag\":true,\"start_time\":1572760027,\"end_time\":4097368706,\"is_first_subscribe\":true,\"is_cancel_subscribe\":false,\"uid\":\"0\",\"subscribe_uid\":\"6994471978279372290\",\"subscribe_type\":\"un-auto\",\"authkey\":\"f51e67d141350c246e1603d91666cfc4\",\"product_id\":\"beauty_subscription_year\"}",
+  "sign": "jqPiEu4w4Ruq2Wb5qgFgoXLorcKzc+D5OhHQKSAiCD18erA6SU6gJzOV4WLI1D7Ptn6lu0SR80zT4g7ZujvMfWfUQp6jzaJYBUSmak8TXw4Wjzj3su86Zj4FGoK0EjOLmlS3EdFlZDxXoNawF1qsNHWuhqdoA65yEECkjcFwW2o=",
+  "data": {
+    "flag": true,
+    "start_time": 1572760027,
+    "end_time": 4097368706,
+    "is_first_subscribe": true,
+    "is_cancel_subscribe": false,
+    "uid": "0",
+    "subscribe_uid": "6994471978279372290",
+    "subscribe_type": "un-auto",
+    "authkey": "f51e67d141350c246e1603d91666cfc4",
+    "product_id": "beauty_subscription_year"
+  }
+};
+
+$done({body: JSON.stringify(obj)});
+
+/*
+^https:\/\/commerce-i18n-api\.faceucam\.com\/commerce\/v1\/subscription\/user_info
+commerce-i18n-api.faceucam.com
+*/
