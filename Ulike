@@ -1,9 +1,24 @@
 var obj = JSON.parse($response.body);
 
-obj.data["start_time"] = 1635559979;
-obj.data["end_time"] = 4097368706;
-obj.data["flag"] = true;
-obj.data["product_id"] = "beauty_subscription_year";
+obj = {
+  "ret": "0",
+  "errmsg": "success",
+  "systime": "1635560043436",
+  "response": "{\"flag\":true,\"start_time\":1635559979,\"end_time\":1636164803,\"is_first_subscribe\":false,\"is_cancel_subscribe\":false,\"uid\":\"0\",\"subscribe_uid\":\"6994471978279372290\",\"subscribe_type\":\"auto\",\"authkey\":\"c2e5e3d3f08053a0a79cfd945948a2d5\",\"product_id\":\"beauty_subscription_year\"}",
+  "sign": "Yb/UfrhvfLzFkHIYZi+Zc5cOFf5lpsnNt7G6sL0H9Sy05WEMCRloB3hjqE6w5xEDtKqDCkSTKpVdE/bjPJX5jKcZpCRKp66GqsrA88Hh7EO9RClEddh2rOId1wXKZetlQ4Lbp5e1VBWiyfLl0gRMYfklgtD7jINtVZLo4HAmIIs=",
+  "data": {
+    "flag": true,
+    "start_time": 1635559979,
+    "end_time": 4097368706,
+    "is_first_subscribe": false,
+    "is_cancel_subscribe": false,
+    "uid": "0",
+    "subscribe_uid": "6994471978279372290",
+    "subscribe_type": "auto",
+    "authkey": "c2e5e3d3f08053a0a79cfd945948a2d5",
+    "product_id": "beauty_subscription_year"
+  }
+};
 
 $done({body: JSON.stringify(obj)});
 
