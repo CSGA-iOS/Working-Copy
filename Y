@@ -1,0 +1,50 @@
+#default config
+#Date: 2021.02.19
+#Author: Loon
+
+[General]
+ipv6 = false
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.18.0.0/15,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+dns-server = system,
+allow-udp-proxy = false
+allow-wifi-access = true
+wifi-access-http-port = 7222
+wifi-access-socket5-port = 7221
+proxy-test-url = http://www.qualcomm.cn/generate_204
+test-timeout = 3
+
+[Proxy]
+♻Home = DIRECT
+🇯🇵Japan = Shadowsocks,158.101.143.129,13631,chacha20-ietf-poly1305,"XtCt518zXDdR",fast-open=false,udp=false
+
+[Proxy Group]
+Proxy VIP = select,♻Home,🇯🇵Japan,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/global.png
+[Rule]
+#Type:DOMAIN-SUFFIX,DOMAIN,DOMAIN-KEYWORD,USER-AGENT,URL-REGEX,IP-CIDR
+#Strategy:DIRECT,PROXY,REJECT
+#Options:no-resolve(only for cidr)
+
+DOMAIN-KEYWORD,google,PROXY
+GEOIP,cn,DIRECT
+FINAL,PROXY
+
+[Rewrite]
+enable = false
+^https?:\/\/(www.)?(g|google)\.cn 302 https://www.google.com
+
+[Script]
+http-response ^https:\/\/api\.pokekara\.com\/x\/user\/login\/history script-path=karaoke1.js, requires-body=true, timeout=10, tag=karaoke1
+http-response ^https:\/\/api\.pokekara\.com\/x\/(user\/profile|member\/subscriptions) script-path=karaoke.js, requires-body=true, timeout=10, tag=karaoke
+http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=Restore.js, requires-body=true, timeout=10, enabled=false, tag=Restore
+http-response ^https:\/\/api\.revenuecat\.com\/v1\/subscribers\/[0-9a-fA-F+-_]{21} script-path=revencat.js, requires-body=true, timeout=10, enabled=false, tag=Revencat
+enable = false
+
+[Plugin]
+https://www.blackyukios.tk/Plugin/V.I.P.plugin, tag=V.I.P, enabled=true
+https://www.blackyukios.tk/Plugin/YoutubeAds.plugin, tag=YoutubeAds, enabled=true
+[Mitm]
+ca-p12 = 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
+ca-passphrase = 6821N7NC
+skip-server-cert-verify = false
+hostname = api.pokekara.com,buy.itunes.apple.com,api.revenuecat.com
