@@ -1,0 +1,27 @@
+let obj = JSON.parse($response.body);
+let sub= obj["subscriber"];
+sub["subscriptions"]["com.ultralabapps.instagrids.sub.yearly_45.99_trial_3"]= 
+{
+        "billing_issues_detected_at": null,
+        "expires_date": "2999-11-13T02:00:16Z",
+        "grace_period_expires_date": null,
+        "is_sandbox": false,
+        "original_purchase_date": "2021-11-10T02:00:16Z",
+        "ownership_type": "PURCHASED",
+        "period_type": "trial",
+        "purchase_date": "2021-11-10T02:00:16Z",
+        "store": "app_store",
+        "unsubscribe_detected_at": "2021-11-10T17:57:36Z"
+      };
+    
+/*
+sub["entitlements"]["pro"]= {
+        "expires_date": "2099-11-23T14:03:59Z",
+        "product_identifier": "periodtracker.app.subscription.monthly",
+        "purchase_date": "2019-11-09T14:03:59Z"
+};
+*/
+
+$done({body: JSON.stringify(obj)});
+
+//^https:\/\/api\.revenuecat\.com\/v1\/subscribers\/[0-9a-fA-F]{13}-[0-9a-fA-F]{7}
